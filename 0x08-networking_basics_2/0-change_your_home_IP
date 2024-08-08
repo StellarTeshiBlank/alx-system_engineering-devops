@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Adds IP address to /etc/hosts
+
+# Backup the original /etc/hosts file
+cp /etc/hosts /etc/hosts.bak
+
+# Create a new temporary hosts file
+cp /etc/hosts ~/hosts.new
+
+# Modify localhost entry to point to 127.0.0.2
+sed -i 's/127.0.0.1/127.0.0.2/' ~/hosts.new
+
+# Add facebook.com entry pointing to 8.8.8.8 after the first line
+sed -i '2i8.8.8.8 facebook.com' ~/hosts.new
+
+# Replace the original /etc/hosts with the modified version
+cp -f ~/hosts.new /etc/hosts
+
+# Optional: Clean up by removing the temporary file
+rm ~/hosts.new
