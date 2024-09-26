@@ -19,7 +19,7 @@ def number_of_subscribers(subreddit):
         subreddit is invalid or doesn't exist.
     """
     headers = {'User-Agent': 'Mozilla/5.0'}
-    url = f"https://www.reddit.com/r/{subreddit}/about.json"
+    url = f"https://www.reddit.com/r/{}/about.json".format(subreddit)
 
     response = requests.get(url, headers=headers, allow_redirects=False)
 
