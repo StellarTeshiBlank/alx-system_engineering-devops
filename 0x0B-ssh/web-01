@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# server-01 login
+ssh ubuntu@100.25.29.204
