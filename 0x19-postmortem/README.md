@@ -1,0 +1,1 @@
+# Postmortem - Every system goes down so being able to understand and tackle each one gives you an edge. So What better way better of understanding a problem than to put it in writing in a way others will understand.
